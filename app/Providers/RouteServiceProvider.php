@@ -38,6 +38,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
 
             Route::get('/notes/{id}', [NotesController::class, 'get']);
+            Route::post('/notes', [NotesController::class, 'create']);
         });
     }
 }

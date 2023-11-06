@@ -13,4 +13,13 @@ class NotesController extends Controller
         $notes = Notes::findOrFail($id);
         return $notes;
     }
+
+    public function create(Request $request): string {
+        $note = new Notes;
+        $note->title = $request->title;
+        $note->description = $request->description;
+
+        $note->save();
+        return "Add a note";
+    }
 }
