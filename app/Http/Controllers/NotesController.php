@@ -24,4 +24,13 @@ class NotesController extends Controller
         $note->save();
         return "Add a note";
     }
+
+    public function update(Request $request): string {
+        // Update
+        $note = Notes::findOrFail($request->id);
+        $note->title = $request->title;
+        $note->description = $request->description;
+        $note->save();
+        return "Update a note";
+    }
 }
