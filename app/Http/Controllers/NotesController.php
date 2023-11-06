@@ -33,4 +33,12 @@ class NotesController extends Controller
         $note->save();
         return "Update a note";
     }
+
+    public function delete(string $id): string {
+        // Delete
+        $notes = Notes::findOrFail($id);
+        $notes->delete();
+
+        return "Delete a note";
+    }
 }

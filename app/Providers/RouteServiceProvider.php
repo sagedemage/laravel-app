@@ -40,6 +40,7 @@ class RouteServiceProvider extends ServiceProvider
             Route::get('/notes/{id}', [NotesController::class, 'get']);
             Route::post('/notes', [NotesController::class, 'create']);
             Route::patch('/notes', [NotesController::class, 'update']);
+            Route::delete('/notes/{id}', [NotesController::class, 'delete']);
         });
     }
 }
