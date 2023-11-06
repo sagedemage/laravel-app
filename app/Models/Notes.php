@@ -14,7 +14,7 @@ class Notes extends Model
      *
      * @var string
      */
-    protected $primaryKey = 'note_id';
+    protected $primaryKey = 'id';
 
     /**
      * The attributes that are mass assignable.
